@@ -4,8 +4,9 @@ cask "dockpick" do
   version "0.6.6"
   sha256 "26c5bbdde2e8c208295dd762821ad83020850e35b54174d5bd3a616c356553d7"
 
-  url "https://app-update-feed.wuneo.com/dockpick/DockPick-#{version}.dmg",
-      verified: "app-update-feed.wuneo.com/dockpick/"
+  # No `verified:` although the download host is not the homepage's: Homebrew
+  # now verifies that by itself, and warns about the parameter (2026-11-12).
+  url "https://app-update-feed.wuneo.com/dockpick/DockPick-#{version}.dmg"
   name "DockPick"
   desc "Window previews from the Dock"
   homepage "https://dockpick.wuneo.com/"
