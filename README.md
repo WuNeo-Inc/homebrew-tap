@@ -3,12 +3,17 @@
 Mac apps from [WuNEO](https://wuneo.com), installable with [Homebrew](https://brew.sh).
 
 ```bash
+brew tap wuneo-inc/tap
+brew trust --cask wuneo-inc/tap/<app>
 brew install --cask wuneo-inc/tap/<app>
 ```
 
+The middle step is Homebrew's own: recent versions load a cask from a tap other than their own only once
+it has been trusted. `brew trust wuneo-inc/tap` trusts every app here at once.
+
 | App | Install |
 | --- | --- |
-| DockPick: window previews from the Dock | `brew install --cask wuneo-inc/tap/dockpick` |
+| DockPick: window previews from the Dock | `brew trust --cask wuneo-inc/tap/dockpick && brew install --cask wuneo-inc/tap/dockpick` |
 
 An app appears here once it has a stable release; pre-releases are not published to Homebrew.
 
